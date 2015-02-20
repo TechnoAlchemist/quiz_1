@@ -5,20 +5,22 @@ public class WindChill {
 
   public static void main(String[] args) {
 
-    int fahrenheit, celsius; 
-    double wChill;
-    Scanner scane = new Scanner(System.in); 
+    int tempC, wSpeed; 
+    double tempF, wChill;
+    Scanner scan = new Scanner(System.in); 
 
     System.out.println("Welcome to the National Weather Service's Wind Chill estimator." + "\nPlease enter the temperature in Celsius. ");
+    
     System.out.println("Temperature:  ");
+    tempC = scan.nextInt();
 
-    celsius = scan.nextDouble();
+    System.out.println("Wind Speed (mph):  ");
+    wSpeed = scan.nextInt();
 
-    fahrenheit = (1.8 * celsius) + 32;
+    tempF = (1.8 * tempC) + 32;
 
-    wChill = 35.74 + (0.6215 * fahrenheit) + ((0.4275 * fahrenheit) - 35.75)
+    wChill = 35.74 + (0.6215 * tempF) + (((0.4275* tempF) - 35.75) * (Math.pow(wSpeed, 0.16))); 
 
-
-
+    System.out.println("The wind chill is estimated to be " + (int)wChill + " degrees Fahrenheit.");
   }
 }
