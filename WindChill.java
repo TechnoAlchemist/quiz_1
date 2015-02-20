@@ -1,3 +1,5 @@
+/* Gabriel Lafontant glafonta@gmail.com*/
+
 import java.util.Scanner;
 import java.text.DecimalFormat;
 
