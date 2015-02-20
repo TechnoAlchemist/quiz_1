@@ -11,10 +11,10 @@ public class WindChill {
 
     System.out.println("Welcome to the National Weather Service's Wind Chill estimator." + "\nPlease enter the temperature in Celsius. ");
     
-    System.out.println("Temperature:  ");
+    System.out.print("Temperature:  ");
     tempC = scan.nextInt();
 
-    System.out.println("Wind Speed (mph):  ");
+    System.out.print("Wind Speed (mph):  ");
     wSpeed = scan.nextInt();
 
     tempF = (1.8 * tempC) + 32;
